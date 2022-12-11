@@ -20,6 +20,6 @@ class Food(Turtle):
         """
         Appears in a random position within the screen size, but leaving 30 pixels margin to each end.
         """
-        random_x = random.randint(-270, 270)
-        random_y = random.randint(-270, 270)
+        random_x = random.randint(-265, 265)
+        random_y = random.randint(-265, 265)
         self.setposition(random_x, random_y)

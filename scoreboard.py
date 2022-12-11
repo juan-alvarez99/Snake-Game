@@ -1,7 +1,7 @@
 from turtle import Turtle
 # Global variables
 ALIGNMENT = 'center'
-FONT = ('Courier', 20, 'bold')
+FONT = ('Courier', 15, 'bold')
 
 
 class Scoreboard(Turtle):
@@ -24,7 +24,7 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.pencolor('white')
         self.penup()
-        self.setposition(x=0, y=270)
+        self.setposition(x=0, y=275)
         self.refresh()
 
     def refresh(self):

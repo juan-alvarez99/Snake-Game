@@ -63,7 +63,7 @@ while scoreboard.game_is_on:
         food.random_spawn()
 
     # Detect collision with wall. Game Over.
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 270 or snake.head.xcor() < -270 or snake.head.ycor() > 270 or snake.head.ycor() < -270:
         scoreboard.game_over()
 
     # Detect collision with tail. Game Over.

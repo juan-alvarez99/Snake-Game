@@ -30,6 +30,7 @@ class Snake:
         self.create_snake()
         self.head = self.body[0]
         self.tail = self.body[-1]
+        self.draw_screen_limits()
 
     def create_snake(self):
         """
@@ -67,6 +68,20 @@ class Snake:
             self.body[seg_number].goto(new_position)
         # Then move the head
         self.head.forward(MOVE_DISTANCE)
+
+    @staticmethod
+    def draw_screen_limits():
+        painter = Turtle()
+        painter.hideturtle()
+        painter.penup()
+        painter.pencolor('white')
+        painter.pensize(2)
+        painter.goto(x=270, y=270)
+        painter.pendown()
+        painter.goto(x=270, y=-270)
+        painter.goto(x=-270, y=-270)
+        painter.goto(x=-270, y=270)
+        painter.goto(x=270, y=270)
 
     def right(self):
         """
