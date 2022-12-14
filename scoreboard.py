@@ -21,6 +21,7 @@ class Scoreboard(Turtle):
         super().__init__()
         self.game_is_on = True
         self.score = 0
+        self.high_score = 0
         self.hideturtle()
         self.pencolor('white')
         self.penup()
@@ -31,20 +32,29 @@ class Scoreboard(Turtle):
         """
         Changes the appearance of the scoreboard.
         """
-        self.write(arg=f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+        self.clear()
+        self.write(arg=f"Score: {self.score} Highest Score: {self.high_score}", align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
         """
         Increases the scoreboard by 1.
         """
         self.score += 1
-        self.clear()
         self.refresh()
 
-    def game_over(self):
-        """
-        Shows that the game is over and turn self.game_is_on to False and thus the game stops.
-        """
-        self.setposition(x=0, y=0)
-        self.write(arg=f"GAME OVER", align=ALIGNMENT, font=FONT)
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+        self.score = 0
+        self.refresh()
+
+    def end_game(self):
         self.game_is_on = False
+
+    # def game_over(self):
+    #     """
+    #     Shows that the game is over and turn self.game_is_on to False and thus the game stops.
+    #     """
+    #     self.setposition(x=0, y=0)
+    #     self.write(arg=f"GAME OVER", align=ALIGNMENT, font=FONT)
+    #     self.game_is_on = False

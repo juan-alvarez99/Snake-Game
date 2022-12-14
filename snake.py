@@ -69,6 +69,14 @@ class Snake:
         # Then move the head
         self.head.forward(MOVE_DISTANCE)
 
+    def reset(self):
+        for segment in self.body:
+            segment.hideturtle()
+        self.body.clear()
+        self.create_snake()
+        self.head = self.body[0]
+        self.tail = self.body[-1]
+
     @staticmethod
     def draw_screen_limits():
         painter = Turtle()
