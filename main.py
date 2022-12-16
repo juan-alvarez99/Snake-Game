@@ -6,18 +6,15 @@ Date: 11.12.2022
 Github: https://github.com/juan-alvarez99
 Linkedin: https://www.linkedin.com/in/juan-alv/
 ========================================================================================================
-========================================================================================================
-
 This are the rules:
     - The snake is always moving forward
     - You can control the direction of the snake using the keyboard arrows
     - The snake cannot turn 180 degrees in one single move
     - The snake gets bigger the more pieces of food (white dots in the screen) it eats
     - If the snake hits the wall or its own tail the game is over
-
+    - Press space to exit the game
 Did you like it? You can play as many times as you want!
 Enjoy!
-========================================================================================================
 ========================================================================================================
 """
 from turtle import Screen
