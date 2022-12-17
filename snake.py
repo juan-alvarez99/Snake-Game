@@ -70,8 +70,10 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
 
     def reset(self):
-        for segment in self.body:
-            segment.hideturtle()
+        """
+        Deletes the snake body and creates a new one in the middle of the screen
+        """
+        self.body = [segment.hideturtle() for segment in self.body]
         self.body.clear()
         self.create_snake()
         self.head = self.body[0]
